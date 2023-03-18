@@ -1,0 +1,53 @@
+Classes required
+
+Player:
+    -> There can be multiplayers
+    -> A player rolls dice, makes move until it wins.
+    -> Attributes: 
+        - name (string)
+        - id (string)
+        - position (number)
+    -> Methods:
+        - makeMove(): void
+Board: 
+    -> The board will have cells and represents the game
+    -> Attributes:
+        - cells: Cell[][]
+    -> Methods:
+        - movePosition(currPosition: number, diceCount: number): number
+
+Cell:
+    -> A cell represents an individual block
+    -> It has either a snake or ladder (Optional)
+    -> Attributes:
+        - Jump
+
+Jump: Represents snake or ladder
+    -> A jump represents either a snake or ladder. We don't need separate classes for snake and 
+        ladder because their reeponsibility is to move the player from one to other position.
+    -> Attributes:
+        - start: number
+        - end: number
+
+Dice:
+    -> Can be multiple dice.
+    -> A player rolls a dice or multiple dice, get a sum of the values for each dice and then 
+        move the item.
+    -> Attributes:
+        - max (number)
+        - min (number)
+    -> Methods:
+        - rollDice(): number
+
+Game:
+    -> The top level class which starts and continues the game
+    -> Attributes:
+        - player (Player LinkedList)
+        - board (Board)
+        - dice: (Dice[])
+
+Winning condition:
+
+Return when there is a winner
+
+
