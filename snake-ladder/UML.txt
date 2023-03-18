@@ -45,6 +45,13 @@ Game:
         - player (Player LinkedList)
         - board (Board)
         - dice: (Dice[])
+    -> Methods:
+        - rollDice(): number
+        - movePlayer(): void
+        - checkIfWinner(): boolean
+        - initializeBoard()
+        - initializePlayers()
+        - initializeDice()
 
 Winning condition:
 
