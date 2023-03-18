@@ -24,6 +24,10 @@ class Board {
     movePosition ( currPosition, diceCount ) {
         return this.#getFinalPosition(currPosition + diceCount);
     }
+
+    checkIfPlayerWinner ( position ) {
+        return position >= this.#cells.length;
+    }
 }
 
 export default Board;

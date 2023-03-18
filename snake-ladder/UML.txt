@@ -8,7 +8,7 @@ Player:
         - id (string)
         - position (number)
     -> Methods:
-        - makeMove(): void
+        - setPosition(): void
 Board: 
     -> The board will have cells and represents the game
     -> Attributes:
