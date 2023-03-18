@@ -12,7 +12,7 @@ Player:
 Board: 
     -> The board will have cells and represents the game
     -> Attributes:
-        - cells: Cell[][]
+        - cells: Cell[]
     -> Methods:
         - movePosition(currPosition: number, diceCount: number): number
 
