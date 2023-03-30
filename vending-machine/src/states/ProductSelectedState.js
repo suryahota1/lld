@@ -4,6 +4,7 @@ export default class ProductSelectedState extends State {
 
     chooseProduct( slot ) {
         // const productPrice = this.context.
+        
     }
 
     cancelSelectProduct() {
