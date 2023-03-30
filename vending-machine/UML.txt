@@ -1,0 +1,50 @@
+A vending machine stores a collection of items and provides it to the user when requested.
+It provides an interface to the owner to add products into the inventory and an interface
+to the user to add money and request to dispense the selected product.
+
+Entities Required:
+
+1. VendingMachine
+
+    -state: State
+    -inventory: Inventory
+
+    +fillProducts
+    +insertCoin
+    +selectProduct
+    +dispenseProduct
+    +cancelInsertCoin
+    +cancelProductSelect
+    +setState
+
+2. Inventory
+
+    +addProduct(product: Product, slot: Slot)
+    +retrieveProduct(slot: Slot)
+
+3. Slot
+
+    -serialNumber
+
+4. Product
+
+    -name
+    -description
+
+5. Coin: Enum(10, 20, 50, 100)
+
+
+States a Vending machine goes through:
+
+1. Idle state: The vending machine is idle, ready to accept any request. It can now only 
+accept coins.
+2. Coin Inserted state: User inserts coin into the machine so that he can request a 
+product.
+3. Product selected state: User selects the product.
+4. Dispensed state: The product is dispensed.
+
+Idle -> CoinInserted -> ProductSelected -> Dispensed -> Idle
+
+The vending machine uses State design pattern. It goes through different states and 
+behaves differently in each state.
+
